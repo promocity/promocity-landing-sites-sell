@@ -1,13 +1,15 @@
 /*
 * promocity landing sites sell
 */
-
+@import "partials/app";
+@import "normalize.less";
+@import "classes.less";
+@import "var.less";
 /*
 * Custom
 */
-@import "partials/app";
-@import "classes.less";
-@import "var.less";
+@import "partials/owl.carousel.less";
+@import "partials/owl.theme.less";
 
 /* Layout and universal styles
 ----------------------------------------------------------------------------------------- */
@@ -34,6 +36,11 @@ body {
 
 .content-wr-925 {
   width: 925px;
+  margin: 0 auto;
+}
+
+.content-wr-1100 {
+  width: 1110px;
   margin: 0 auto;
 }
 
@@ -123,6 +130,11 @@ a {
   font-size: 14px;
   padding: 10px 9px 8px 9px;
   margin: 7px 0 0 0;
+  transition: background 0.1s linear;
+}
+
+.header-contacts__button:hover {
+  background: darken(#e27478, 15%); 
 }
 
 .header-sites-nav {
@@ -141,10 +153,11 @@ a {
   text-transform: uppercase;
   padding: 7px 15px 6px 15px;
   margin-top: 4px;
+  text-align: center;
 }
 
 .header-sites-nav-ul-item__link {
-  color: #fefefe;  
+  color: #fefefe;
 }
 
 .header-sites-nav-ul-item__link:hover {
@@ -155,8 +168,56 @@ a {
   background: #10619c;
 }
 
-/* main content
+/*фиксированное плавающее меню*/
+#top_nav {
+   top: 110px; /*высота шапки в пикселях*/
+   position: fixed;
+   z-index: 1000;
+   width: 100%;
+}
+
+/* drop-down menu */
+.header-sites-nav-ul-item-drop-down {
+  opacity: 0;
+  visible: hidden;
+  margin-top: 10px;
+}
+
+.header-sites-nav-ul__item--bg-dark:hover .header-sites-nav-ul-item-drop-down {
+  opacity: 1;
+  visible: visible;
+}
+
+.header-sites-nav-ul-item-drop-down-item {
+  margin-bottom: 5px;
+}
+
+.header-sites-nav-ul-item-drop-down-item:last-child {
+  margin-bottom: 0;
+}
+
+.header-sites-nav-ul-item-drop-down-item__link {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.header-sites-nav-ul-item-drop-down-item__link:hover {
+  text-decoration: underline;
+}
+
+
+/* forms
 ----------------------------------------------------------------------------------------- */
+label.error {
+  display: none !important;
+}
+
+input.error {
+  display: block;
+  border: #ff6364 solid 1px;
+}
 
 /* section 1
 ----------------------------------------------------------------------------------------- */
@@ -291,16 +352,110 @@ a {
   text-align: center;
   text-transform: uppercase;
   padding: 15px 30px 12px 30px;
+  transition: background 0.1s linear;  
+}
+
+.section-2-item-site-descr__btn:hover {
+  background: lighten(#0c6fb4, 8%); 
 }
 /* slider
 ----------------------------------------------------------------------------------------- */
+.slider {
+  padding-top: 65px;
+}
+
 .slider__head {
   display: block;
   text-transform: uppercase;
   text-align: center;
   color: #0c6fb4;
   font-size: 30px;
+  margin-bottom: 28px;
 }
+
+.slider-owl-slider {
+}
+
+.slider-owl-slider-item {
+  margin: 0 85px;
+}
+
+.slider-owl-slider-item-logo-wr {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  height: 55px;
+  text-align: center;
+}
+
+/* костыль для inline-block центровка по вертикали */
+.slider-owl-slider-item-logo-wr:after {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slider-item-owl-slider__logo-preview {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slider-owl-slider-item-text-wr {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.slider-owl-slider-item-company-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #000;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.slider-owl-slider-item-company-name:hover {
+  text-decoration: underline;
+}
+
+.slider-owl-slider-item-text {
+  display: block;
+  width: 670px;
+}
+
+.slider-owl-slider-item__main-img {
+  display: block;
+  margin: 0 auto;
+}
+/* owl slider styles
+----------------------------------------------------------------------------------------- */
+#slider .owl-pagination .owl-page span {
+  background: #0c6fb4; 
+}
+
+#slider .owl-prev,
+#slider .owl-next {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  border-radius: 0;
+  width: 23px;
+  height: 35px;
+  opacity: 1;
+}
+
+#slider .owl-prev {
+  background: url(../img/slider/arrow-left.png) no-repeat 50% 50%;
+  margin: -200px 0 0 -597px;
+}
+
+#slider .owl-next {
+  background: url(../img/slider/arrow-right.png) no-repeat 50% 50%;  
+  margin: -200px 0 0 522px;
+}
+
 
 /* we
 ----------------------------------------------------------------------------------------- */
@@ -362,7 +517,7 @@ a {
 :-ms-input-placeholder      { color: rgba(0,0,0,0.5); }
 
 .request-wr {
-  background: url(../img/request/request-bg.jpg) no-repeat 0 -27px;
+  background: url(../img/request/request-bg.jpg) no-repeat 0 0;
   // background-size: cover;
 }
 
@@ -376,7 +531,7 @@ a {
   color: #0c6fb4;
   text-transform: uppercase;
   font-size: 30px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
 }
 
 .request__text {
@@ -408,11 +563,9 @@ a {
   margin: 3px 15px 0 0;
 }
 
-input[type=checkbox]:checked + label:before  {
+input[type=radio]:checked + label:before  {
   background: url(../img/request/request-checked.png) no-repeat 50% 50%;
 }
-
- // input[type=checkbox]:checked + label:before
 
 .request__input {
   display: none;
@@ -441,7 +594,13 @@ input[type=checkbox]:checked + label:before  {
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
+  transition: background 0.1s linear;
 }
+
+.request__submit:hover {
+  background: darken(#0c6fb4, 15%); 
+}
+
 
 /* contacts
 ----------------------------------------------------------------------------------------- */
@@ -476,6 +635,8 @@ input[type=checkbox]:checked + label:before  {
 .contacts-ul-item:nth-child(3) { background: url(../img/contacts/item-3.png) no-repeat 0 50%; }
 
 .contacts-ul-item__text {
+  color: #0c6fb4;
+  font-size: 20px;
   align-self: center;
 }
 
@@ -488,6 +649,7 @@ input[type=checkbox]:checked + label:before  {
   display: block;
   color: #0c6fb4;
   font-size: 20px;
+
 }
 
 .contacts-ul-item__link:hover {
