@@ -30,7 +30,7 @@
       <div class="header-contacts">
         <a class="header-contacts__tel" href="tel:89221574214">+7 (922) 157 42 14</a>
         <a class="header-contacts__tel" href="tel:79222232162">+7 (922) 223 21 62</a>
-        <a href="#" class="header-contacts__button">Заказать звонок</a>
+        <a href="#" class="header-contacts__button" id="header-call-request-btn">Заказать звонок</a>
       </div>    
     </div>
     <nav class="header-sites-nav" id="top_nav">
@@ -257,8 +257,15 @@
   
   </section>
   
-  <section class="footer">
-    Footer
+  <section class="forms">
+    <div class="forms__pop-up-overlay"></div>
+    <form class="forms-pop-up" id="call-request-form" method="post" action="/">
+      <div class="forms-pop-up__close-btn"></div>
+      <h5 class="forms-pop-up__head">Оформите заявку и наши менеджеры вам перезвонят</h5>
+      <input class="forms-pop-up__input-text  required" type="text" placeholder="Имя" name="name">
+      <input class="forms-pop-up__input-text  required" id="pop-up-tel" type="text" placeholder="Телефон" name="tel">
+      <button class="forms-pop-up__submit" type="submit">Оформить</button>
+    </form>
   </section>
   <script src="js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&a...."></script>

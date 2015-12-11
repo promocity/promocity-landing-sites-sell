@@ -47,8 +47,12 @@ $(document).ready(function() {
         required: "Заполните поле телефон."
      }
    }
-
  });
 
+  $("#header-call-request-btn").click(function(){
+    $("#call-request-form").show();
+    $(".forms__pop-up-overlay").show();
+    return false;
+  });
 
 });
