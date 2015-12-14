@@ -84,6 +84,7 @@ a {
 .header-main-nav-ul-item {
   text-transform: uppercase;
   color: #000;
+  font: @sansFont;
   font-size: 16px;
   padding: 0 20px;
   margin-top: 65px;
@@ -105,7 +106,7 @@ a {
 }
 
 .header-contacts {
-  width: 155px;
+  width: 260px;
   padding-top: 15px;
 }
 
@@ -113,6 +114,8 @@ a {
   display: block;
   color: @fontColored;
   font-size: 18px;
+  font: @sansFont;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 3px;
 }
@@ -123,13 +126,15 @@ a {
 
 .header-contacts__button {
   display: block;
+  width: 170px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   background: #e27478;
   font-size: 14px;
-  padding: 10px 9px 8px 9px;
-  margin: 7px 0 0 0;
+  font: @sansFont;
+  padding: 10px 7px 8px 7px;
+  margin: 7px auto 0;
   transition: background 0.1s linear;
 }
 
@@ -154,6 +159,7 @@ a {
   padding: 7px 15px 6px 15px;
   margin-top: 4px;
   text-align: center;
+  font: 17px @sansFont;
 }
 
 .header-sites-nav-ul-item__link {
@@ -215,7 +221,8 @@ label.error {
 
 input.error {
   display: block;
-  border: #ff6364 solid 1px;
+  outline: #ff6364 solid 1px;
+  background: #ffe3e3;
 }
 
 /* section 1
@@ -225,17 +232,19 @@ input.error {
   box-shadow: 0px 9px 9px 0px rgba(0,0,0,0.5);  
 }
 .section-1 {
-  height: 365px;  
-  background: url(../img/section-1/sect-1-bg.png) no-repeat 50% 50%;
+  height: 400px;  
+  background: url(../img/section-1/sect-1-bg.png) no-repeat 50% 34px;
 }
 
 .section-1-header {
   color: #10619c;
-  padding-top: 100px;
+  padding-top: 130px;
   width: 900px;
   margin: 0 auto;
   text-align: center;
   font-size: 50px;
+  font-weight: normal;
+  font-family: @sansFont;
 }
 
 .section-1-header span:first-child {
@@ -243,7 +252,10 @@ input.error {
 }
 
 .section-1-header span {
+  font-family: @sansFont;
+  font-weight: bold;
   text-transform: uppercase;
+  padding-left: 10px;
 }
 /* section 2
 ----------------------------------------------------------------------------------------- */
@@ -285,6 +297,8 @@ input.error {
 .section-2-item-site-descr__head {
   color: #0c6fb4;
   font-size: 30px;
+  font-family: @sansFont;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 70px 0 20px 0;
 }
@@ -300,6 +314,7 @@ input.error {
 .section-2-item-site-descr__text {
   color: #000;
   font-size: 14px;
+  font-family: @sansFont;
   margin-bottom: 35px;
 }
 
@@ -307,6 +322,7 @@ input.error {
   margin-bottom: 15px;
   color: rgba(0, 0, 0,.6);
   font-size: 20px;
+  font-family: @sansFont;
   text-decoration: line-through;
 }
 
@@ -323,6 +339,7 @@ input.error {
 .section-2-item-site-descr-price {
   color: #0c6fb4;
   font-size: 30px;
+  font-family: @sansFont;
   margin-bottom: 35px;
 }
 
@@ -350,7 +367,9 @@ input.error {
   background: #0c6fb4;
   text-align: center;
   text-transform: uppercase;
-  padding: 15px 30px 12px 30px;
+  font: 20px @sansFont;
+  font-weight: bold;
+  padding: 12px 30px 12px 30px;
   transition: background 0.1s linear;  
 }
 
@@ -368,7 +387,9 @@ input.error {
   text-transform: uppercase;
   text-align: center;
   color: #0c6fb4;
+  font-family: @sansFont;
   font-size: 30px;
+  font-weight: bold;
   margin-bottom: 28px;
 }
 
@@ -412,6 +433,8 @@ input.error {
   vertical-align: top;
   color: #000;
   font-size: 24px;
+  font-family: @sansFont;
+  font-weight: bold;
   margin-bottom: 8px;
 }
 
@@ -422,6 +445,7 @@ input.error {
 .slider-owl-slider-item-text {
   display: block;
   width: 670px;
+  font: 14px @sansFont;
 }
 
 .slider-owl-slider-item__main-img {
@@ -473,12 +497,15 @@ input.error {
   color: #0c6fb4;
   text-transform: uppercase;
   font-size: 35px;
+  font-family: @sansFont;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
 .who-we__text {
   color: #000;
   font-size: 24px;
+  font-family: @sansFont;
   margin-bottom: 65px;
 }
 
@@ -505,6 +532,7 @@ input.error {
 .offer-ul-item:nth-child(3) { background: url(../img/we/offer-item-img-3.png) no-repeat 0 50%; }
 
 .offer-ul-item__text {
+  font-family: @sansFont;
   align-self: center;
 }
 
@@ -530,7 +558,9 @@ input.error {
   color: #0c6fb4;
   text-transform: uppercase;
   font-size: 30px;
-  margin: 10px 0 20px 0;
+  font-family: @sansFont;
+  font-weight: bold;
+  margin: 10px 0 15px 0;
 }
 
 .request__text {
@@ -539,14 +569,18 @@ input.error {
   width: 500px;
   color: #000;
   font-size: 18px;
-  margin: 0 auto 28px;
+  font-family: @sansFont;
+  font-weight: bold;
+  margin: 0 auto 20px;
 }
 
 .request-label {
   display: block;
-  width: 240px;
+  width: 260px;
   color: #0c6fb4;
   font-size: 20px;
+  font-family: @sansFont;
+  font-weight: bold;
   cursor: pointer;
   text-align: left;
   margin: 0 auto 10px;
@@ -574,7 +608,9 @@ input[type=radio]:checked + label:before  {
   display: block;
   width: 368px;
   height: 43px;
-  margin: 0 auto 11px;
+  margin: 0 auto 10px;
+  font: 18px @sansFont;
+  font-weight: bold;
   padding-left: 20px;
   border: 1px solid #0c6fb4;
 }
@@ -586,10 +622,12 @@ input[type=radio]:checked + label:before  {
 .request__submit {
   display: inline-block;
   vertical-align: top;
-  padding: 13px 38px 10px 38px;
-  margin: 10px 0 25px 0;
+  padding: 13px 45px 10px 45px;
+  margin: 2px 0 25px 0;
   background: #0c6fb4;
   color: #fff;
+  font: 24px @sansFont;
+  font-weight: bold;
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
@@ -606,6 +644,8 @@ input[type=radio]:checked + label:before  {
   text-transform: uppercase;
   text-align: center;
   font-size: 30px;
+  font-family: @sansFont;
+  font-weight: bold;
   color: #0c6fb4;
 }
 
@@ -635,6 +675,8 @@ input[type=radio]:checked + label:before  {
 .contacts-ul-item__text {
   color: #0c6fb4;
   font-size: 20px;
+  font-family: @sansFont;
+  font-weight: bold;
   align-self: center;
 }
 
@@ -647,7 +689,8 @@ input[type=radio]:checked + label:before  {
   display: block;
   color: #0c6fb4;
   font-size: 20px;
-
+  font-family: @sansFont;
+  font-weight: bold;
 }
 
 .contacts-ul-item__link:hover {
@@ -658,6 +701,8 @@ input[type=radio]:checked + label:before  {
   align-self: center;
   color: #0c6fb4;
   font-size: 20px;
+  font-family: @sansFont;
+  font-weight: bold;
 }
 
 .contacts-ul-item__mail:hover {
@@ -675,6 +720,7 @@ input[type=radio]:checked + label:before  {
   color: #000;
   text-transform: uppercase;
   font-size: 17px;
+  font-family: @sansFont;
 }
 
 .contacts-nav__item:hover {
@@ -762,8 +808,36 @@ input[type=radio]:checked + label:before  {
   background: url(../img/krestig.png) no-repeat 50% 50%;
 }
 
+.complete-window {
+  display: none;
+  position: fixed;  
+  z-index: 110;
+  width: 500px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  background: #fff;
+  border: 3px solid #10619c;
+  text-align: center;
+  padding: 22px 0;
+}
 
+.complete-window__text {
+  display: inline-block;
+  vertical-align: middle;
+  font: 24px @sansFont;
+  font-weight: bold;
+  color: #10619c;
+}
 
+.complete-window__text:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 200px;
+}
 
 
 
