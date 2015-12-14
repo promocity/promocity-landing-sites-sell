@@ -16,8 +16,7 @@ $(document).ready(function() {
   /* slider */
   $("#slider").owlCarousel({
     navigation: true,
-    items : 1, 
-    stopOnHover : true,
+    items : 1,
     lazyLoad : true,
     slideSpeed : 800,
     navigationText : false,
