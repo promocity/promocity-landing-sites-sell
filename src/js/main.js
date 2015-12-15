@@ -20,9 +20,9 @@ $(document).ready(function() {
     lazyLoad : true,
     slideSpeed : 800,
     navigationText : false,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    pauseOnHover : true
+    autoPlay: 6000,
+    pauseOnHover : true,
+    stopOnHover : true
   });
 
   $("#request-tel").mask("+7 (999) 999-9999");
