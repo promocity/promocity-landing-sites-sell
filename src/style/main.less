@@ -225,6 +225,10 @@ input.error {
   background: #ffe3e3;
 }
 
+input.error ~ .request-label {
+  color: #ff6364;
+}
+
 /* section 1
 ----------------------------------------------------------------------------------------- */
 .section-1-wr {
@@ -601,7 +605,7 @@ input[type=radio]:checked + label:before  {
 }
 
 .request__input {
-  display: none;
+  display: none !important;
 }
 
 .request__input-text {
@@ -810,7 +814,8 @@ input[type=radio]:checked + label:before  {
   background: url(../img/krestig.png) no-repeat 50% 50%;
 }
 
-.complete-window {
+.complete-window,
+#note2 {
   display: none;
   position: fixed;  
   z-index: 110;

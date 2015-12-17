@@ -74,7 +74,7 @@ gulp.task('style:build', function() {
       browsers: ['last 5 versions'],
       cascade: false
     })) // Добавим вендорные префиксы
-    .pipe(cssmin()) // Сожмем
+    // .pipe(cssmin())
     //.pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css)) // И в build
     .pipe(reload({ stream: true }));
@@ -82,12 +82,12 @@ gulp.task('style:build', function() {
 
 gulp.task('image:build', function() {
   gulp.src(path.src.img) // Выберем наши картинки
-    // .pipe(imagemin({
-    //   progressive: true,
-    //   svgoPlugins: [{removeViewBox: false}],
-    //   use: [pngquant()],
-    //   interlaced: true
-    // }))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()],
+      interlaced: true
+    }))
     .pipe(gulp.dest(path.build.img)) // И бросим в build
     .pipe(reload({ stream: true }));
 });
